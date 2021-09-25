@@ -773,13 +773,13 @@ function displayVideo(evt) {
     videoEl.style.width = '100%';
     videoEl.muted = true;
     videoEl.autoplay = true;
-    videoEl.playsInline = true;
+    videoEl.playsinline = true;
     // videoEl.controls = "true";
-    videoEL.onclick = _ => video.play();
+    // videoEL.onclick = _ => video.play();
 
     videoEl.srcObject = new MediaStream([evt.track]);
     
-    // videoEl.play();
+    videoEl.play();
 }
 
 function playAudio(evt) {
