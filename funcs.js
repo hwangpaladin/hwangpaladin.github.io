@@ -696,7 +696,7 @@ function joinDailyCall() {
 
     callFrame = window.DailyIframe.createFrame(videoRTC);
     callFrame.join({
-        url: 'https://paladindrones.daily.co/selenium-test'
+        url: 'https://paladindrones.daily.co/hamiltontest'
     })
     //TODO: add some sort of await after call frame is joined to stop showing local video
     //callFrame.setShowLocalVideo(false);
@@ -711,7 +711,7 @@ function leave2() {
 
 async function main() {
     // CHANGE THIS TO A ROOM WITHIN YOUR DAILY ACCOUNT
-    const ROOM_URL = 'https://paladindrones.daily.co/selenium-test';
+    const ROOM_URL = 'https://paladindrones.daily.co/hamiltontest';
 
     window.call = DailyIframe.createCallObject({
         url: ROOM_URL,
