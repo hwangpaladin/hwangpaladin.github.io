@@ -773,9 +773,11 @@ function displayVideo(evt) {
     videoEl.style.width = '100%';
     videoEl.playsInline = true;
     videoEl.autoplay = true;
+    videoEl.controls = "true";
+
     videoEl.srcObject = new MediaStream([evt.track]);
     videoEl.muted = true;
-    videoEl.play();
+    // videoEl.play();
 }
 
 function playAudio(evt) {
