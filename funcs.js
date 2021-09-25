@@ -775,6 +775,7 @@ function displayVideo(evt) {
     videoEl.autoplay = true;
     videoEl.playsInline = true;
     // videoEl.controls = "true";
+    videoEL.onclick = _ => video.play();
 
     videoEl.srcObject = new MediaStream([evt.track]);
     
