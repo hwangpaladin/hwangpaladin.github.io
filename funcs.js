@@ -771,12 +771,13 @@ function displayVideo(evt) {
     let videoEl = document.createElement('video');
     videosDiv.appendChild(videoEl);
     videoEl.style.width = '100%';
+    videoEl.muted = true;
+    videoEl.autoplay = true;
     videoEl.playsInline = true;
-    // videoEl.autoplay = true;
-    videoEl.controls = "true";
+    // videoEl.controls = "true";
 
     videoEl.srcObject = new MediaStream([evt.track]);
-    videoEl.muted = true;
+    
     // videoEl.play();
 }
 
