@@ -772,6 +772,7 @@ function displayVideo(evt) {
     videosDiv.appendChild(videoEl);
     videoEl.style.width = '100%';
     videoEl.playsInline = true;
+    videoEl.autoplay = true;
     videoEl.srcObject = new MediaStream([evt.track]);
     videoEl.muted = true;
     videoEl.play();
