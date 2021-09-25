@@ -1,0 +1,346 @@
+body {
+    background-color: #1d1e21;
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+}
+
+div {
+    color: white;
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+}
+
+.videoStream {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/*.liveStreamWindows {
+	max-height: 300px;
+}*/
+
+.droneControls {
+    /* display: grid; */
+    height: 15%;
+    /* grid-template-rows: 50% 50%; */
+    /* grid-auto-rows: minmax(150px, auto); */
+    /* grid-gap: 1em; */
+}
+
+.mapWrapper {
+    height: 85%
+}
+
+.map {
+    height: 100%
+}
+
+.leftSide {
+    height: 90%;
+    /* display: grid;
+    grid-template-columns: 34% 66%; */
+    float: left;
+    width: 30%;
+}
+
+.droneTitle {
+    font-size: 25px;
+}
+
+.droneInfo {
+    font-size: 20px;
+}
+
+/* Optional: Makes the sample page fill the window. */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.liveStreamWindows {
+    float: left;
+    width: 70%;
+    background-color: #1d1e21;
+    height: 90%;
+    overflow: auto;
+}
+
+.offlineImage {
+    width: 100%;
+    height: 90%;
+    /* background-image: url("img_girl.jpg"); */
+    /* Full height 
+		height: 100%; */
+    /* Center and scale the image nicely */
+    /* background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover; */
+}
+
+.offlineImage>img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* video {
+    width: 100%;
+    /* padding:0 0 56.25% 0;
+    max-height: 100%;
+    min-height: 85%;
+}*/
+
+.wowzaPlayer {
+    width: 100%;
+    height: 0;
+    padding: 0 0 56.25% 0;
+}
+
+.logo-font {
+    cursor: pointer;
+}
+
+.offlinePNG {
+    width: 100%;
+    height: 0;
+    padding: 0 0 56.25% 0
+    /*	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 85%;*/
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(100px, auto);
+}
+
+.nested {
+    /* display: grid; */
+    /* max-height:100px */
+    /*grid-template-rows: repeat(6, 1fr);*/
+    /* grid-auto-rows: minmax(90px, auto); */
+    
+    /*grid-gap:1em;*/
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*.wholePage {
+	display:grid;
+	grid-template-rows: 10% 100% 10%;
+}*/
+
+.nested2 {
+    /* display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(90px, auto);
+    grid-gap: 1em; */
+    
+}
+
+.nested>div {
+    /*background: #eee;*/
+    /* padding: 1em; */
+}
+
+.wrapper>div:nth-child(odd) {
+    /*background: #ddd;*/
+}
+
+.nested>div {
+    /*border:#333 1px solid;*/
+    /*padding:1em;*/
+}
+
+.nested>div:hover {
+    background-color: #3C3A3E;
+    /*This is light gray and it looks gooood*/
+    cursor: pointer;
+}
+
+.nested>div {
+    cursor: pointer;
+}
+
+div.currentVideoTitle {
+    font-size: 40px;
+}
+
+.nested3 {
+    /*color: #1d1e21;*/
+}
+
+.videojpg>img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.toolbar {
+    /*background-color: red;*/
+    height: 50px;
+    color: #fafbff;
+    font-size: 50px;
+}
+
+.nested0 {
+    /*This makes the head*/
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 7% 93%;
+    grid-auto-rows: minmax(90px, auto);
+}
+
+@media (pointer:none), (pointer:coarse) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100% 0%;
+        grid-template-rows: 100%;
+        grid-auto-rows: minmax(100px, auto);
+        grid-auto-columns: minmax(100px, auto);
+    }
+}
+
+#pac-input {
+    width: 99%;
+    height: 80%;
+}
+
+.destinationStuff {
+    height: 50%;
+}
+
+/* .button {
+    height: 100%;
+    width: 100%;
+} */
+
+#pac-input:focus {
+    border-color: #fe944d;
+}
+
+.unselectedButton {
+    background-color: #1d1e21;
+    border: none;
+    color: white;
+    /* padding: 15px 25px; */
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.selectedButton {
+    background-color: #f08f65;
+    border: none;
+    color: white;
+    /* padding: 15px 25px; */
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.whiteButton {
+    background-color: white;
+    border: none;
+    color: #1d1e21;
+    /* padding: 15px 25px; */
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.selectedMapButton {
+    background-color: #f08f65;
+    border: none;
+    color: white;
+    /* padding: 15px 25px; */
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.selectedMapButton:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.selectedMapButton:hover {
+    background-color: #8f5942;
+}
+
+.button {
+    border-radius: 12px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.mapButton {
+    border-radius: 12px;
+    /* height: 100%; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.mapButton:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.unselectedButton:hover {
+    background-color: #8f5942;
+}
+
+.autonomousControls {
+    height: 40%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.newDroneInfo {
+    height: 5%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.gimbalControls {
+    height: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cameraZoomControls {
+    height: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.customspacer {
+    height: 1%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+/* .mapButtonBar {
+    top: 10px;
+} */
+
+.testClass {
+    top: 10px
+}

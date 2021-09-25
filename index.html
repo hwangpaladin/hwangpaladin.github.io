@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Overwatch</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+    </style>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6hxjbFwGToDdC8E5oBZt5_3T8jq5ChH4"></script> -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6hxjbFwGToDdC8E5oBZt5_3T8jq5ChH4&libraries=places"></script>
+    <!-- INCLUDE WOWZA LIBRARY -->
+    <script type="text/javascript" src="https://player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <!-- INCLUDE LIBRARIES -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@0.8.2"></script>
+
+    <!-- adding agora stuff -->
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.3.0.js"></script>
+
+    <!-- adding daily stuff -->
+    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="header-wrap add_background" id="header" onClick="goToHomepage()">
+        <h3 class="logo-font">
+            <img class="logo" src="img/logo.jpg" height="15px" /> Watchtower</h3>
+    </div>
+    <div id="offlineImage" class="offlineImage" style="display: none">
+        <img src="img/droneOffline.png">
+    </div>
+
+    <div class="liveStreamWindows" id="liveStreamWindows" style="display: none">
+        <div class="customspacer">
+
+        </div>
+        <div class="newDroneInfo">
+            <button class="whiteButton button" id="droneBattText">Batt: 100%</button>
+
+            <button class="whiteButton button" id="droneAltText">Alt: 60m</button>
+
+            <button class="whiteButton button" id="droneSpeedText">Speed: 15m/s</button>
+        </div>
+        <div class="customspacer">
+
+        </div>
+        <div class="gimbalControls">
+            <button class="unselectedButton button" id="gimbalUpBtn" onClick="gimbalChange(10)">Gimbal Up</button>
+
+            <button class="unselectedButton button" id="gimbalDownBtn" onClick="gimbalChange(-10)">Gimbal Down</button>
+        </div>
+        <div class="customspacer">
+            
+        </div>
+        <div class="cameraZoomControls">
+            <button class="unselectedButton button" id="cameraZoomIn" onClick="changeZoom(10)">Zoom In</button>
+
+            <button class="unselectedButton button" id="cameraZoomOut" onClick="changeZoom(-10)">Zoom Out</button>
+        </div>
+    </div>
+    <div class="leftSide" id="leftSide" style="display: none">
+        <div class="droneControls" id="droneControls">
+            <div class="destinationStuff">
+                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            </div>
+            <div class="autonomousControls">
+                <button type="button" class="unselectedButton button" onClick="updateActiveAutonomousButton(5, true)"
+                    id="startBtn">Start</button>
+
+                <button type="button" class="selectedButton button" onClick="updateActiveAutonomousButton(4, true)"
+                    id="stopBtn">Stop</button>
+
+                <button type="button" class="unselectedButton button" onClick="updateActiveAutonomousButton(1, true)"
+                    id="rthBtn">RTH</button>
+            </div>
+        </div>
+        <div class="mapWrapper">
+            <div id="map" class="map"></div>
+        </div>
+        <div id="mapButtonBar">
+            <div class="testClass">
+                <button type="button" class="unselectedButton mapButton" onClick="toggleAutoZoom()"
+                    id="autoZoomButton">Center
+                    on Drone</button>
+                <button type="button" class="unselectedButton mapButton" onClick="toggleDropMarker()"
+                    id="dropMarkerButton">Drop
+                    Marker</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="droneTextDatas">
+
+    </div>
+    <div class="container">
+        <div class="row video-group">
+            <div class="col">
+                <p id="local-player-name" class="player-name"></p>
+                <div id="local-player" class="player"></div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+                <div id="remote-playerlist"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+    <script src="funcs.js"></script>
+</body>
+
+</html>
