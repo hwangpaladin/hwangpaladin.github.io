@@ -771,16 +771,15 @@ function displayVideo(evt) {
     let videoEl = document.createElement('video');
     videosDiv.appendChild(videoEl);
     videoEl.style.width = '100%';
-    videoEl.muted = true;
-    videoEl.autoplay = true;
-    videoEl.playsInline = true;
+    videoEl.srcObject = new MediaStream([evt.track]);
+    // videoEl.muted = true;
+    // videoEl.autoplay = true;
+    // videoEl.playsInline = true;
     // videoEl.controls = "true";
     // videoEL.onclick = _ => video.play();
 
     videoEl.setAttribute('muted', true);
     videoEl.setAttribute('playsinline', true);
-
-    videoEl.srcObject = new MediaStream([evt.track]);
     
     videoEl.play();
 }
