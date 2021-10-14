@@ -773,9 +773,12 @@ function displayVideo(evt) {
     videoEl.style.width = '100%';
     videoEl.muted = true;
     videoEl.autoplay = true;
-    videoEl.playsinline = true;
+    videoEl.playsInline = true;
     // videoEl.controls = "true";
     // videoEL.onclick = _ => video.play();
+
+    videoEl.setAttribute('muted', true);
+    videoEl.setAttribute('playsinline', true);
 
     videoEl.srcObject = new MediaStream([evt.track]);
     
